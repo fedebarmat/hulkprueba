@@ -1,0 +1,198 @@
+@font-face{
+   font-family: "DIN Next HC";
+   src: url("../fonts/DINNextLTPro-HeavyCondensed.ttf");
+ }
+
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DIN Next HC";
+}
+
+.header {
+  background-color: transparent;
+  height: 100px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0 auto;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0 40px;
+  line-height: 80px;
+}
+
+.nav-menu {
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+}
+
+.nav-menu-item {
+  font-size: 18px;
+  margin: 0 10px;
+  line-height: 80px;
+  text-transform: uppercase;
+  width: max-content;
+}
+
+.nav-menu-link {
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_active {
+  background-color: #034574;
+  transition: 0.5s;
+}
+
+.index-section{
+  background-image: url("../img/hulkindex.jpg");
+  background-position: center;
+  background-size: cover;
+   width: 100%;
+   height: 850px;
+ }
+
+.index-section h1 {
+  margin-left: 20px;
+  font-size: 29px;
+  color: white;
+}
+
+.index-section h2{
+  font-size: 200px;
+  color: #1a5127;
+  margin-left: 15px;
+  -webkit-text-stroke: 3px #000;
+}
+
+.index-section {
+  margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.footer{
+   width: 100%px;
+   height: 50px;
+   background-color: #000;
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .ucesmarvel{
+   display: flex;
+   align-items: center;
+   justify-content: left;
+   margin-left: 15px;
+ }
+
+ .disneyplus{
+   display: flex;
+   align-items: center;
+   justify-content: right;
+   margin-right: 15px;
+ }
+
+ .marvel{
+  margin-left: 10px;
+}
+
+.nombre{
+  font-size: 14px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* TOGGLE */
+.nav-toggle {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px;
+  line-height: 60px;
+  cursor: pointer;
+
+  display: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  body {
+  }
+
+  .header {
+    height: 60px;
+  }
+
+  .logo {
+    font-size: 25px;
+    padding: 0 20px;
+    line-height: 60px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: #1a5127;
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    padding: 20px 0;
+
+    height: calc(100% - 60px);
+    overflow-y: auto;
+
+    left: 100%;
+    transition: left 0.3s;
+  }
+
+  .nav-menu-item {
+    line-height: 70px;
+  }
+
+  .nav-menu-link:hover,
+  .nav-menu-link_active {
+    background: none;
+    color: #83c5f7;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu_visible {
+    left: 0;
+  }
+
+  .nav-toggle:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
